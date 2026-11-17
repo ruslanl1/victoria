@@ -93,6 +93,8 @@ section[id]{scroll-margin-top:68px}
 .btn-ghost:hover{background:rgba(255,255,255,.14)}
 .btn-line{background:transparent;color:var(--accent);border-color:var(--line)}
 .btn-line:hover{background:var(--accent-soft)}
+.btn-dl{background:#fff;color:var(--navy-1);box-shadow:0 10px 24px rgba(0,0,0,.28)}
+.btn-dl:hover{background:#E6F0FC;transform:translateY(-1px)}
 .btn-sm{min-height:42px;padding:0 18px;font-size:.9688rem}
 .btn-sm .i{width:19px;height:19px}
 .btn-ic{width:42px;padding:0}
@@ -470,6 +472,42 @@ section[id]{scroll-margin-top:68px}
 .pnote .i{width:19px;height:19px}
 @media (max-width:980px){.plans,.pnotes{grid-template-columns:minmax(0,1fr)}}
 
+/* download */
+.get{padding-block:clamp(64px,9vw,120px)}
+.get .sec-head h2{color:#fff}
+.get .sec-head p{color:var(--night-muted);text-wrap:balance}
+.gets{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-top:44px}
+.get-card{display:flex;flex-direction:column;gap:18px;background:var(--night-card);border:1px solid var(--night-line);border-radius:24px;padding:28px 26px}
+.android-first .get-card.and{order:-1}
+.get-top{display:flex;align-items:center;gap:16px}
+.get-ic{width:58px;height:58px;border-radius:16px;display:grid;place-items:center;background:rgba(140,192,240,.14);color:var(--sky-l);flex:none}
+.get-ic .i{width:30px;height:30px}
+.get-card h3{font-size:1.5rem;color:#fff;line-height:1.3}
+.get-top p{color:var(--night-muted);font-size:var(--fs-sm)}
+.get-card .btn{width:100%;min-height:56px;font-size:1.125rem}
+.get-file{display:flex;flex-wrap:wrap;justify-content:center;gap:2px 12px;margin-top:-8px;font-size:var(--fs-xs);color:var(--night-muted)}
+.steps{list-style:none;counter-reset:s;margin:0;padding:18px 0 0;border-top:1px solid var(--night-line);display:grid;gap:10px}
+.steps li{counter-increment:s;display:flex;gap:12px;align-items:flex-start;font-size:var(--fs-sm);line-height:1.75;color:var(--night-text)}
+.steps li::before{content:counter(s);flex:none;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:rgba(140,192,240,.16);color:var(--sky-l);font-weight:700;font-size:var(--fs-xs);margin-top:1px}
+.steps .en{direction:ltr;unicode-bidi:isolate;white-space:nowrap;color:var(--night-muted)}
+.safe{list-style:none;padding:0;margin:28px 0 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.safe li{display:flex;gap:12px;align-items:flex-start;padding:16px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid var(--night-line);font-size:var(--fs-sm);line-height:1.7;color:var(--night-muted)}
+.safe b{display:block;color:#fff;font-size:.96rem;margin-bottom:2px}
+.safe .ic{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;background:rgba(52,211,153,.14);color:var(--green-l);flex:none}
+.safe .i{width:19px;height:19px}
+.sums{margin-top:18px;border:1px solid var(--night-line);border-radius:16px;background:rgba(255,255,255,.03)}
+.sums summary{cursor:pointer;padding:14px 18px;font-weight:600;font-size:var(--fs-sm);color:var(--night-text)}
+.sums dl{margin:0;padding:0 18px;display:grid;gap:12px}
+.sums dt{font-size:var(--fs-xs);color:var(--night-muted)}
+.sums dd{margin:2px 0 0;font-family:ui-monospace,Consolas,monospace;font-size:.8rem;line-height:1.6;color:#fff;direction:ltr;text-align:right;overflow-wrap:anywhere;user-select:all}
+.sums-how{padding:14px 18px 16px;font-size:var(--fs-xs);color:var(--night-muted)}
+.sums code{font-family:ui-monospace,Consolas,monospace;font-size:.78rem;background:rgba(255,255,255,.08);border-radius:6px;padding:2px 6px;color:#fff;overflow-wrap:anywhere;user-select:all}
+.get-note{margin-top:18px;text-align:center;font-size:var(--fs-xs);color:var(--night-muted)}
+.get-note a{color:var(--sky-l)}
+@media (max-width:1020px){.safe{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:760px){.gets{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:560px){.safe{grid-template-columns:minmax(0,1fr)}.get-card{padding:24px 20px}}
+
 /* faq */
 .faq{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:40px}
 .qa{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:22px 24px}
@@ -543,6 +581,10 @@ footer a{color:var(--night-text)}
   <symbol id="i-lock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
   <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M5.6 5.6l2.8 2.8M15.6 15.6l2.8 2.8M5.6 18.4l2.8-2.8M15.6 8.4l2.8-2.8"/></symbol>
   <symbol id="i-swap" viewBox="0 0 24 24"><path d="M8 3 4 7l4 4M4 7h16M16 21l4-4-4-4M20 17H4"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></symbol>
+  <symbol id="i-monitor" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></symbol>
+  <symbol id="i-mobile" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></symbol>
+  <symbol id="i-hash" viewBox="0 0 24 24"><path d="M4 9h16M4 15h16M10 3 8 21M16 3l-2 18"/></symbol>
 </svg>
 
 <div class="site">
@@ -558,6 +600,7 @@ footer a{color:var(--night-text)}
       <a href="#kinds">أنواع المحلات</a>
       <a href="#all">كل المميزات</a>
       <a href="#plans">الباقات</a>
+      <a href="#download">التحميل</a>
       <a href="#faq">الأسئلة</a>
     </nav>
     <div class="top-act">
@@ -578,6 +621,7 @@ footer a{color:var(--night-text)}
       <i class="rule" aria-hidden="true"></i>
       <p class="lead"><b>VICTORIA</b> نظام نقطة بيع وإدارة للمحلات: البيع والمخزون وتواريخ الصلاحية، والعملاء والديون، والموردون والحسابات والتقارير. يعمل على ويندوز وأندرويد، وتبقى بياناتك على جهازك دون إنترنت.</p>
       <div class="cta">
+        <a class="btn btn-dl" href="#download"><svg class="i"><use href="#i-download"/></svg>تحميل البرنامج</a>
         <a class="btn btn-wa" href="https://wa.me/9647822890992?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%D8%8C%20%D8%A3%D9%88%D8%AF%D9%91%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D8%AC%20VICTORIA" target="_blank" rel="noopener"><svg class="i"><use href="#i-wa"/></svg>تواصل عبر واتساب</a>
         <a class="btn btn-ghost" href="tel:+9647822890992"><svg class="i"><use href="#i-phone"/></svg><span class="ltr num">07822890992</span></a>
         <a class="watch-link" href="#video"><span class="pl"><svg class="i"><use href="#i-play"/></svg></span>مشاهدة الفيديو</a>
@@ -1274,7 +1318,7 @@ footer a{color:var(--night-text)}
           <li><span class="ok"><svg class="i"><use href="#i-check"/></svg></span>الطباعة والإيصالات بشعار VICTORIA</li>
           <li><span class="ok"><svg class="i"><use href="#i-check"/></svg></span>النسخ الاحتياطي</li>
         </ul>
-        <a class="btn btn-line" href="https://wa.me/9647822890992?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%D8%8C%20%D8%A3%D9%88%D8%AF%D9%91%20%D8%A7%D9%84%D8%AD%D8%B5%D9%88%D9%84%20%D8%B9%D9%84%D9%89%20%D8%A7%D9%84%D9%86%D8%B3%D8%AE%D8%A9%20%D8%A7%D9%84%D9%85%D8%AC%D8%A7%D9%86%D9%8A%D8%A9%20%D9%85%D9%86%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D8%AC%20VICTORIA" target="_blank" rel="noopener"><svg class="i"><use href="#i-wa"/></svg>طلب النسخة المجانية</a>
+        <a class="btn btn-line" href="#download"><svg class="i"><use href="#i-download"/></svg>تحميل النسخة المجانية</a>
       </article>
       <article class="plan">
         <h3>القياسية</h3>
@@ -1326,6 +1370,62 @@ footer a{color:var(--night-text)}
   </div>
 </section>
 
+<!-- download -->
+<section class="night get" id="download" aria-labelledby="h-get">
+  <div class="grid-bg"></div><div class="blob b1"></div><div class="blob b2"></div>
+  <div class="wrap">
+    <div class="sec-head c">
+      <span class="kicker">التحميل</span>
+      <h2 id="h-get">تحميل VICTORIA مجانًا</h2>
+      <p>يعمل البرنامج فور تثبيته بالباقة المجانية دون مفتاح، وتُفتح الباقتان القياسية والاحترافية بمفتاح تفعيل من داخله.</p>
+    </div>
+    <div class="gets" id="gets">
+      <article class="get-card win" aria-labelledby="h-get-win">
+        <div class="get-top">
+          <span class="get-ic"><svg class="i"><use href="#i-monitor"/></svg></span>
+          <div><h3 id="h-get-win">للحاسوب</h3><p>ويندوز 10 أو 11 (64 بت)</p></div>
+        </div>
+        <a class="btn btn-dl" href="https://github.com/ruslanl1/victoria/releases/download/v2.26.2/VICTORIA-Setup-2.26.2.exe"><svg class="i"><use href="#i-download"/></svg>تحميل لويندوز</a>
+        <p class="get-file"><span class="ltr">VICTORIA-Setup-2.26.2.exe</span><span><span class="num">18.3</span> م.ب</span></p>
+        <ol class="steps">
+          <li><span>بعد اكتمال التحميل يُفتح الملف ويُضغط «تثبيت».</span></li>
+          <li><span>لا يحتاج صلاحيات المدير، وتُضاف أيقونته إلى سطح المكتب وقائمة ابدأ.</span></li>
+          <li><span>لأن البرنامج جديد قد يطلب المتصفح تأكيد الاحتفاظ بالملف، وقد تظهر نافذة ويندوز الزرقاء: «مزيد من المعلومات» <span class="en" lang="en">(More info)</span> ثم «تشغيل على أي حال» <span class="en" lang="en">(Run anyway)</span>.</span></li>
+        </ol>
+      </article>
+      <article class="get-card and" aria-labelledby="h-get-and">
+        <div class="get-top">
+          <span class="get-ic"><svg class="i"><use href="#i-mobile"/></svg></span>
+          <div><h3 id="h-get-and">للهاتف والتابلت</h3><p>أندرويد 7.0 فأحدث</p></div>
+        </div>
+        <a class="btn btn-dl" href="https://github.com/ruslanl1/victoria/releases/download/v2.26.2/VICTORIA-2.26.2.apk"><svg class="i"><use href="#i-download"/></svg>تحميل لأندرويد</a>
+        <p class="get-file"><span class="ltr">VICTORIA-2.26.2.apk</span><span><span class="num">89.7</span> م.ب</span></p>
+        <ol class="steps">
+          <li><span>بعد اكتمال التحميل يُفتح الملف من الإشعار أو من «التنزيلات».</span></li>
+          <li><span>عند السؤال يُسمح بالتثبيت من هذا المصدر، ثم «تثبيت».</span></li>
+          <li><span>إن نبّه <span lang="en">Play Protect</span> فلأن التطبيق من خارج المتجر، ويكتمل التثبيت من «التثبيت على أي حال» <span class="en" lang="en">(Install anyway)</span>.</span></li>
+        </ol>
+      </article>
+    </div>
+    <ul class="safe" aria-label="أمان التحميل">
+      <li><span class="ic"><svg class="i"><use href="#i-lock"/></svg></span><span><b>اتصال مشفّر</b>الموقع والتحميل عبر <span class="ltr">HTTPS</span>، فيصل الملف كما رُفع دون تعديل في الطريق.</span></li>
+      <li><span class="ic"><svg class="i"><use href="#i-shield"/></svg></span><span><b>شيفرة محمية</b>البرنامج مبني بشيفرة مموّهة لا تظهر فيها أسماء أجزائه، فيصعب تفكيكه أو العبث بتفعيله.</span></li>
+      <li><span class="ic"><svg class="i"><use href="#i-key"/></svg></span><span><b>تطبيق موقّع</b>تطبيق أندرويد موقّع بمفتاح VICTORIA الخاص، فلا يقبل الجهاز تحديثًا فوقه من مصدر آخر.</span></li>
+      <li><span class="ic"><svg class="i"><use href="#i-hash"/></svg></span><span><b>بصمة لكل ملف</b>بصمة <span class="ltr">SHA-256</span> أدناه للتأكد من أن الملف المحمَّل مطابق للأصل.</span></li>
+    </ul>
+    <details class="sums">
+      <summary>بصمات التحقق <span class="ltr">(SHA-256)</span></summary>
+      <dl>
+        <div><dt class="ltr">VICTORIA-Setup-2.26.2.exe</dt><dd>526e423aa12975294c541852905cfa0d2f1729c50675389c45aba1902f4392db</dd></div>
+        <div><dt class="ltr">VICTORIA-2.26.2.apk</dt><dd>884291d9b1ec1994d827dae9c9628095ac6eaf4fbe19e8814ed0968d35270b15</dd></div>
+        <div><dt>شهادة توقيع تطبيق أندرويد</dt><dd>804eeecd676da6a30aae2f93d7515f8886422b1267b76c832bddd84600c48b0e</dd></div>
+      </dl>
+      <p class="sums-how">على ويندوز تظهر بصمة الملف بالأمر <code class="ltr">certutil -hashfile VICTORIA-Setup-2.26.2.exe SHA256</code></p>
+    </details>
+    <p class="get-note">الإصدار <span class="ltr num">2.26.2</span> · 17 تشرين الثاني 2026 · الملفات على <a href="https://github.com/ruslanl1/victoria/releases/tag/v2.26.2" target="_blank" rel="noopener">صفحة الإصدارات في GitHub</a></p>
+  </div>
+</section>
+
 <!-- faq -->
 <section class="band" id="faq" aria-labelledby="h-faq">
   <div class="wrap">
@@ -1336,7 +1436,9 @@ footer a{color:var(--night-text)}
     <div class="faq">
       <div class="qa"><h3>هل يحتاج البرنامج إلى إنترنت؟</h3><p>لا. كل البيانات محفوظة على جهازك، والبرنامج يعمل دون إنترنت. وحتى ربط أجهزة المحل يتم على شبكة المحل نفسها أو بكيبل مباشر.</p></div>
       <div class="qa"><h3>على أي أجهزة يعمل؟</h3><p>على حواسيب ويندوز 10 و11، وعلى هواتف أندرويد 7.0 فأحدث وأجهزة التابلت، طوليًا وعرضيًا.</p></div>
-      <div class="qa"><h3>هل توجد نسخة مجانية؟</h3><p>نعم. الباقة المجانية تعمل دون مفتاح: البيع للزبون النقدي، والمنتجات والمخزون، والنسخ الاحتياطي. أما القياسية والاحترافية فتُفتحان بمفتاح تفعيل.</p></div>
+      <div class="qa"><h3>هل توجد نسخة مجانية؟</h3><p>نعم. الباقة المجانية تعمل دون مفتاح: البيع للزبون النقدي، والمنتجات والمخزون، والنسخ الاحتياطي. أما القياسية والاحترافية فتُفتحان بمفتاح تفعيل. ويُحمَّل البرنامج مجانًا من <a href="#download">قسم التحميل</a>.</p></div>
+      <div class="qa"><h3>هل التحميل آمن؟</h3><p>نعم. يُحمَّل الملفان من GitHub عبر اتصال مشفّر، وشيفرة البرنامج مموّهة يصعب تفكيكها، وتطبيق أندرويد موقّع بمفتاح VICTORIA. ولكل ملف بصمة <span class="ltr">SHA-256</span> في قسم التحميل للتحقق منه.</p></div>
+      <div class="qa"><h3>كيف أحدّث البرنامج؟</h3><p>بتحميل الإصدار الأحدث من هذه الصفحة وتثبيته فوق المثبَّت، فتبقى البيانات ومفتاح التفعيل كما هما.</p></div>
       <div class="qa"><h3>ماذا يحدث للبيانات إذا انتهى الاشتراك؟</h3><p>لا يُحذف شيء. يعود البرنامج إلى الباقة المجانية، وتبقى العملاء والديون والحسابات محفوظة كما هي، والمفتاح الجديد يعيد كل شيء كما كان.</p></div>
       <div class="qa"><h3>كيف أحصل على مفتاح التفعيل؟</h3><p>من داخل البرنامج: الإعدادات ← الترخيص ← «الباقات والترقية»، فيُرسل الطلب برمز الجهاز على واتساب، ثم يُدخل المفتاح في الصفحة نفسها. وكل مفتاح لجهاز واحد.</p></div>
       <div class="qa"><h3>هل يمكن نقل البيانات إلى جهاز جديد؟</h3><p>نعم، بالنسخة الاحتياطية والاستعادة من الإعدادات، والنسخة المشفّرة تُفتح بكلمة مرورها. والباقة تبقى لكل جهاز حسب مفتاحه.</p></div>
@@ -1439,6 +1541,9 @@ footer a{color:var(--night-text)}
   });
   v.addEventListener('pause', function () { chapBtns.forEach(function (b) { b.classList.remove('on'); }); });
   if (window.matchMedia && window.matchMedia('(max-width: 640px)').matches) setMode('short');
+
+  /* on an Android device, its download comes first */
+  if (/Android/i.test(navigator.userAgent)) document.getElementById('gets').classList.add('android-first');
 
   /* copy the number */
   [].slice.call(document.querySelectorAll('[data-copy]')).forEach(function (b) {
