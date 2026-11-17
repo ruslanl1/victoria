@@ -486,27 +486,30 @@ section[id]{scroll-margin-top:68px}
 .get-top p{color:var(--night-muted);font-size:var(--fs-sm)}
 .get-card .btn{width:100%;min-height:56px;font-size:1.125rem}
 .get-file{display:flex;flex-wrap:wrap;justify-content:center;gap:2px 12px;margin-top:-8px;font-size:var(--fs-xs);color:var(--night-muted)}
-.steps{list-style:none;counter-reset:s;margin:0;padding:18px 0 0;border-top:1px solid var(--night-line);display:grid;gap:10px}
-.steps li{counter-increment:s;display:flex;gap:12px;align-items:flex-start;font-size:var(--fs-sm);line-height:1.75;color:var(--night-text)}
-.steps li::before{content:counter(s);flex:none;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:rgba(140,192,240,.16);color:var(--sky-l);font-weight:700;font-size:var(--fs-xs);margin-top:1px}
-.steps .en{direction:ltr;unicode-bidi:isolate;white-space:nowrap;color:var(--night-muted)}
-.safe{list-style:none;padding:0;margin:28px 0 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
-.safe li{display:flex;gap:12px;align-items:flex-start;padding:16px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid var(--night-line);font-size:var(--fs-sm);line-height:1.7;color:var(--night-muted)}
-.safe b{display:block;color:#fff;font-size:.96rem;margin-bottom:2px}
-.safe .ic{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;background:rgba(52,211,153,.14);color:var(--green-l);flex:none}
-.safe .i{width:19px;height:19px}
-.sums{margin-top:18px;border:1px solid var(--night-line);border-radius:16px;background:rgba(255,255,255,.03)}
-.sums summary{cursor:pointer;padding:14px 18px;font-weight:600;font-size:var(--fs-sm);color:var(--night-text)}
-.sums dl{margin:0;padding:0 18px;display:grid;gap:12px}
-.sums dt{font-size:var(--fs-xs);color:var(--night-muted)}
-.sums dd{margin:2px 0 0;font-family:ui-monospace,Consolas,monospace;font-size:.8rem;line-height:1.6;color:#fff;direction:ltr;text-align:right;overflow-wrap:anywhere;user-select:all}
-.sums-how{padding:14px 18px 16px;font-size:var(--fs-xs);color:var(--night-muted)}
-.sums code{font-family:ui-monospace,Consolas,monospace;font-size:.78rem;background:rgba(255,255,255,.08);border-radius:6px;padding:2px 6px;color:#fff;overflow-wrap:anywhere;user-select:all}
+.howto{margin-top:28px;padding:26px;border-radius:24px;background:rgba(255,255,255,.04);border:1px solid var(--night-line)}
+.how-head{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px 20px}
+.how-head h3{font-size:var(--fs-h3);color:#fff;line-height:1.4}
+.how-tabs{display:flex;gap:6px;padding:5px;border-radius:999px;background:rgba(255,255,255,.07);border:1px solid var(--night-line)}
+.how-tabs button{font:inherit;font-weight:600;font-size:var(--fs-sm);color:var(--night-muted);background:transparent;border:0;border-radius:999px;padding:7px 18px;cursor:pointer;display:flex;gap:8px;align-items:center;justify-content:center;white-space:nowrap}
+.how-tabs .i{width:18px;height:18px}
+.how-tabs button[aria-selected="true"]{background:#fff;color:var(--navy-1)}
+.how{list-style:none;margin:20px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.how li{display:flex;flex-direction:column;align-items:flex-start;gap:8px;padding:18px;border-radius:18px;background:var(--night-card);border:1px solid var(--night-line)}
+.how-n{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:var(--sky-l);color:var(--navy-1);font-weight:700;font-size:var(--fs-sm)}
+.how b{color:#fff;font-size:1.0625rem;line-height:1.4}
+.how p{font-size:var(--fs-sm);line-height:1.75;color:var(--night-muted)}
+.keys{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:auto;padding-top:6px}
+.key{display:inline-flex;flex-wrap:wrap;align-items:baseline;gap:0 6px;padding:5px 11px;border-radius:9px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.24);color:#fff;font-size:var(--fs-xs);font-weight:700;line-height:1.55}
+.key i{font-style:normal;font-weight:500;color:var(--night-muted);direction:ltr;unicode-bidi:isolate;white-space:nowrap}
+.key.pri{background:#fff;border-color:#fff;color:var(--navy-1)}
+.key.pri i{color:var(--paper-muted)}
+.key.opt{background:transparent;border-style:dashed}
+.then{color:var(--sky-l);font-weight:700;font-size:var(--fs-sm)}
 .get-note{margin-top:18px;text-align:center;font-size:var(--fs-xs);color:var(--night-muted)}
-.get-note a{color:var(--sky-l)}
-@media (max-width:1020px){.safe{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:1020px){.how{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:760px){.gets{grid-template-columns:minmax(0,1fr)}}
-@media (max-width:560px){.safe{grid-template-columns:minmax(0,1fr)}.get-card{padding:24px 20px}}
+@media (max-width:620px){.how{grid-template-columns:minmax(0,1fr)}.howto{padding:18px 16px}.how-tabs{width:100%}.how-tabs button{flex:1 1 0;padding:7px 10px}}
+@media (max-width:560px){.get-card{padding:24px 20px}}
 
 /* faq */
 .faq{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:40px}
@@ -583,9 +586,7 @@ footer a{color:var(--night-text)}
   <symbol id="i-swap" viewBox="0 0 24 24"><path d="M8 3 4 7l4 4M4 7h16M16 21l4-4-4-4M20 17H4"/></symbol>
   <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></symbol>
   <symbol id="i-monitor" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></symbol>
-  <symbol id="i-mobile" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></symbol>
-  <symbol id="i-hash" viewBox="0 0 24 24"><path d="M4 9h16M4 15h16M10 3 8 21M16 3l-2 18"/></symbol>
-</svg>
+  <symbol id="i-mobile" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></symbol></svg>
 
 <div class="site">
 <header class="top">
@@ -1385,44 +1386,80 @@ footer a{color:var(--night-text)}
           <span class="get-ic"><svg class="i"><use href="#i-monitor"/></svg></span>
           <div><h3 id="h-get-win">للحاسوب</h3><p>ويندوز 10 أو 11 (64 بت)</p></div>
         </div>
-        <a class="btn btn-dl" href="https://github.com/ruslanl1/victoria/releases/download/v2.26.2/VICTORIA-Setup-2.26.2.exe"><svg class="i"><use href="#i-download"/></svg>تحميل لويندوز</a>
+        <a class="btn btn-dl" href="https://github.com/ruslanl1/victoria/releases/download/v2.26.2/VICTORIA-Setup-2.26.2.exe" data-for="win"><svg class="i"><use href="#i-download"/></svg>تحميل لويندوز</a>
         <p class="get-file"><span class="ltr">VICTORIA-Setup-2.26.2.exe</span><span><span class="num">18.3</span> م.ب</span></p>
-        <ol class="steps">
-          <li><span>بعد اكتمال التحميل يُفتح الملف ويُضغط «تثبيت».</span></li>
-          <li><span>لا يحتاج صلاحيات المدير، وتُضاف أيقونته إلى سطح المكتب وقائمة ابدأ.</span></li>
-          <li><span>لأن البرنامج جديد قد يطلب المتصفح تأكيد الاحتفاظ بالملف، وقد تظهر نافذة ويندوز الزرقاء: «مزيد من المعلومات» <span class="en" lang="en">(More info)</span> ثم «تشغيل على أي حال» <span class="en" lang="en">(Run anyway)</span>.</span></li>
-        </ol>
       </article>
       <article class="get-card and" aria-labelledby="h-get-and">
         <div class="get-top">
           <span class="get-ic"><svg class="i"><use href="#i-mobile"/></svg></span>
           <div><h3 id="h-get-and">للهاتف والتابلت</h3><p>أندرويد 7.0 فأحدث</p></div>
         </div>
-        <a class="btn btn-dl" href="https://github.com/ruslanl1/victoria/releases/download/v2.26.2/VICTORIA-2.26.2.apk"><svg class="i"><use href="#i-download"/></svg>تحميل لأندرويد</a>
+        <a class="btn btn-dl" href="https://github.com/ruslanl1/victoria/releases/download/v2.26.2/VICTORIA-2.26.2.apk" data-for="and"><svg class="i"><use href="#i-download"/></svg>تحميل لأندرويد</a>
         <p class="get-file"><span class="ltr">VICTORIA-2.26.2.apk</span><span><span class="num">89.7</span> م.ب</span></p>
-        <ol class="steps">
-          <li><span>بعد اكتمال التحميل يُفتح الملف من الإشعار أو من «التنزيلات».</span></li>
-          <li><span>عند السؤال يُسمح بالتثبيت من هذا المصدر، ثم «تثبيت».</span></li>
-          <li><span>إن نبّه <span lang="en">Play Protect</span> فلأن التطبيق من خارج المتجر، ويكتمل التثبيت من «التثبيت على أي حال» <span class="en" lang="en">(Install anyway)</span>.</span></li>
-        </ol>
       </article>
     </div>
-    <ul class="safe" aria-label="أمان التحميل">
-      <li><span class="ic"><svg class="i"><use href="#i-lock"/></svg></span><span><b>اتصال مشفّر</b>الموقع والتحميل عبر <span class="ltr">HTTPS</span>، فيصل الملف كما رُفع دون تعديل في الطريق.</span></li>
-      <li><span class="ic"><svg class="i"><use href="#i-shield"/></svg></span><span><b>شيفرة محمية</b>البرنامج مبني بشيفرة مموّهة لا تظهر فيها أسماء أجزائه، فيصعب تفكيكه أو العبث بتفعيله.</span></li>
-      <li><span class="ic"><svg class="i"><use href="#i-key"/></svg></span><span><b>تطبيق موقّع</b>تطبيق أندرويد موقّع بمفتاح VICTORIA الخاص، فلا يقبل الجهاز تحديثًا فوقه من مصدر آخر.</span></li>
-      <li><span class="ic"><svg class="i"><use href="#i-hash"/></svg></span><span><b>بصمة لكل ملف</b>بصمة <span class="ltr">SHA-256</span> أدناه للتأكد من أن الملف المحمَّل مطابق للأصل.</span></li>
-    </ul>
-    <details class="sums">
-      <summary>بصمات التحقق <span class="ltr">(SHA-256)</span></summary>
-      <dl>
-        <div><dt class="ltr">VICTORIA-Setup-2.26.2.exe</dt><dd>526e423aa12975294c541852905cfa0d2f1729c50675389c45aba1902f4392db</dd></div>
-        <div><dt class="ltr">VICTORIA-2.26.2.apk</dt><dd>884291d9b1ec1994d827dae9c9628095ac6eaf4fbe19e8814ed0968d35270b15</dd></div>
-        <div><dt>شهادة توقيع تطبيق أندرويد</dt><dd>804eeecd676da6a30aae2f93d7515f8886422b1267b76c832bddd84600c48b0e</dd></div>
-      </dl>
-      <p class="sums-how">على ويندوز تظهر بصمة الملف بالأمر <code class="ltr">certutil -hashfile VICTORIA-Setup-2.26.2.exe SHA256</code></p>
-    </details>
-    <p class="get-note">الإصدار <span class="ltr num">2.26.2</span> · 17 تشرين الثاني 2026 · الملفات على <a href="https://github.com/ruslanl1/victoria/releases/tag/v2.26.2" target="_blank" rel="noopener">صفحة الإصدارات في GitHub</a></p>
+    <div class="howto" role="region" aria-labelledby="h-how">
+      <div class="how-head">
+        <h3 id="h-how">طريقة التحميل والتثبيت</h3>
+        <div class="how-tabs" role="tablist" aria-label="الجهاز">
+          <button type="button" role="tab" id="tab-how-win" data-how="win" aria-selected="true" aria-controls="how-win"><svg class="i"><use href="#i-monitor"/></svg>ويندوز</button>
+          <button type="button" role="tab" id="tab-how-and" data-how="and" aria-selected="false" aria-controls="how-and"><svg class="i"><use href="#i-mobile"/></svg>أندرويد</button>
+        </div>
+      </div>
+      <ol class="how" id="how-win" role="tabpanel" aria-labelledby="tab-how-win">
+        <li>
+          <span class="how-n">1</span>
+          <b>التحميل</b>
+          <p>الضغط على «تحميل لويندوز». وإن نبّه المتصفح أن الملف غير شائع التحميل، يُختار:</p>
+          <span class="keys"><span class="key">الاحتفاظ <i lang="en">Keep</i></span></span>
+        </li>
+        <li>
+          <span class="how-n">2</span>
+          <b>فتح الملف</b>
+          <p>فتحه من التنزيلات. ولأن البرنامج جديد على ويندوز قد تظهر نافذة زرقاء، فيُضغط فيها:</p>
+          <span class="keys"><span class="key">مزيد من المعلومات <i lang="en">More info</i></span><span class="then" aria-hidden="true">←</span><span class="key">تشغيل على أي حال <i lang="en">Run anyway</i></span></span>
+        </li>
+        <li>
+          <span class="how-n">3</span>
+          <b>التثبيت</b>
+          <p>في نافذة تثبيت VICTORIA، دون صلاحيات المدير. وتُضاف أيقونته إلى سطح المكتب وقائمة ابدأ.</p>
+          <span class="keys"><span class="key pri">تثبيت</span><span class="then" aria-hidden="true">←</span><span class="key">فتح البرنامج</span></span>
+        </li>
+        <li>
+          <span class="how-n">4</span>
+          <b>البدء</b>
+          <p>يفتح على «أهلًا بك في VICTORIA»: اختيار اللغة، ثم خطوات قليلة لتجهيز المتجر. ولاستعادة نسخة احتياطية: «لدي نسخة احتياطية».</p>
+          <span class="keys"><span class="key">لنبدأ</span><span class="then" aria-hidden="true">←</span><span class="key pri">ابدأ بمتجر فارغ</span></span>
+        </li>
+      </ol>
+      <ol class="how" id="how-and" role="tabpanel" aria-labelledby="tab-how-and" hidden>
+        <li>
+          <span class="how-n">1</span>
+          <b>التحميل</b>
+          <p>الضغط على «تحميل لأندرويد». وإن سأل المتصفح عن الملف، يُختار:</p>
+          <span class="keys"><span class="key">تنزيل على أي حال <i lang="en">Download anyway</i></span></span>
+        </li>
+        <li>
+          <span class="how-n">2</span>
+          <b>السماح بالتثبيت</b>
+          <p>فتح الملف من الإشعار أو من «التنزيلات». وفي المرة الأولى يطلب الجهاز إذنًا: «الإعدادات» ثم تفعيل:</p>
+          <span class="keys"><span class="key">السماح من هذا المصدر</span></span>
+        </li>
+        <li>
+          <span class="how-n">3</span>
+          <b>التثبيت</b>
+          <p>الرجوع ثم «تثبيت». وإن نبّه <span lang="en">Play Protect</span> فلأن التطبيق من خارج المتجر، ويُكمَل التثبيت من:</p>
+          <span class="keys"><span class="key pri">تثبيت</span><span class="key opt">التثبيت على أي حال <i lang="en">Install anyway</i></span></span>
+        </li>
+        <li>
+          <span class="how-n">4</span>
+          <b>البدء</b>
+          <p>فتح VICTORIA من قائمة التطبيقات، فيبدأ بـ«أهلًا بك في VICTORIA»: اختيار اللغة، ثم خطوات قليلة لتجهيز المتجر.</p>
+          <span class="keys"><span class="key">لنبدأ</span><span class="then" aria-hidden="true">←</span><span class="key pri">ابدأ بمتجر فارغ</span></span>
+        </li>
+      </ol>
+    </div>
+    <p class="get-note">الإصدار <span class="ltr num">2.26.2</span> · 17 تشرين الثاني 2026</p>
   </div>
 </section>
 
@@ -1437,7 +1474,7 @@ footer a{color:var(--night-text)}
       <div class="qa"><h3>هل يحتاج البرنامج إلى إنترنت؟</h3><p>لا. كل البيانات محفوظة على جهازك، والبرنامج يعمل دون إنترنت. وحتى ربط أجهزة المحل يتم على شبكة المحل نفسها أو بكيبل مباشر.</p></div>
       <div class="qa"><h3>على أي أجهزة يعمل؟</h3><p>على حواسيب ويندوز 10 و11، وعلى هواتف أندرويد 7.0 فأحدث وأجهزة التابلت، طوليًا وعرضيًا.</p></div>
       <div class="qa"><h3>هل توجد نسخة مجانية؟</h3><p>نعم. الباقة المجانية تعمل دون مفتاح: البيع للزبون النقدي، والمنتجات والمخزون، والنسخ الاحتياطي. أما القياسية والاحترافية فتُفتحان بمفتاح تفعيل. ويُحمَّل البرنامج مجانًا من <a href="#download">قسم التحميل</a>.</p></div>
-      <div class="qa"><h3>هل التحميل آمن؟</h3><p>نعم. يُحمَّل الملفان من GitHub عبر اتصال مشفّر، وشيفرة البرنامج مموّهة يصعب تفكيكها، وتطبيق أندرويد موقّع بمفتاح VICTORIA. ولكل ملف بصمة <span class="ltr">SHA-256</span> في قسم التحميل للتحقق منه.</p></div>
+      <div class="qa"><h3>هل التحميل آمن؟</h3><p>نعم. يُحمَّل البرنامج من هذه الصفحة مباشرة عبر اتصال آمن. والتنبيه الذي قد يظهر عند التثبيت طبيعي لأي برنامج جديد من خارج المتاجر، ويكتمل التثبيت بخطوات <a href="#download">طريقة التحميل والتثبيت</a>.</p></div>
       <div class="qa"><h3>كيف أحدّث البرنامج؟</h3><p>بتحميل الإصدار الأحدث من هذه الصفحة وتثبيته فوق المثبَّت، فتبقى البيانات ومفتاح التفعيل كما هما.</p></div>
       <div class="qa"><h3>ماذا يحدث للبيانات إذا انتهى الاشتراك؟</h3><p>لا يُحذف شيء. يعود البرنامج إلى الباقة المجانية، وتبقى العملاء والديون والحسابات محفوظة كما هي، والمفتاح الجديد يعيد كل شيء كما كان.</p></div>
       <div class="qa"><h3>كيف أحصل على مفتاح التفعيل؟</h3><p>من داخل البرنامج: الإعدادات ← الترخيص ← «الباقات والترقية»، فيُرسل الطلب برمز الجهاز على واتساب، ثم يُدخل المفتاح في الصفحة نفسها. وكل مفتاح لجهاز واحد.</p></div>
@@ -1542,8 +1579,24 @@ footer a{color:var(--night-text)}
   v.addEventListener('pause', function () { chapBtns.forEach(function (b) { b.classList.remove('on'); }); });
   if (window.matchMedia && window.matchMedia('(max-width: 640px)').matches) setMode('short');
 
-  /* on an Android device, its download comes first */
-  if (/Android/i.test(navigator.userAgent)) document.getElementById('gets').classList.add('android-first');
+  /* downloads: a tab of install steps per device; the visitor's own device first,
+     and a download button opens its own steps */
+  var howTabs = [].slice.call(document.querySelectorAll('[data-how]'));
+  function showHow(p) {
+    howTabs.forEach(function (t) {
+      var on = t.getAttribute('data-how') === p;
+      t.setAttribute('aria-selected', String(on));
+      document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+    });
+  }
+  howTabs.forEach(function (t) { t.addEventListener('click', function () { showHow(t.getAttribute('data-how')); }); });
+  [].slice.call(document.querySelectorAll('[data-for]')).forEach(function (a) {
+    a.addEventListener('click', function () { showHow(a.getAttribute('data-for')); });
+  });
+  if (/Android/i.test(navigator.userAgent)) {
+    document.getElementById('gets').classList.add('android-first');
+    showHow('and');
+  }
 
   /* copy the number */
   [].slice.call(document.querySelectorAll('[data-copy]')).forEach(function (b) {
